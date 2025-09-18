@@ -10,6 +10,9 @@
 <style>
 body {
   text-align: center;
+  margin:0;
+  height:100vh;
+  background: linear-gradient(to top right, skyblue, white);">
 
 }
 button {
@@ -18,12 +21,17 @@ background-color: skyblue;
 border-radius: 4px;
 border: 2px solid black;
 box-shadow: 3px 3px black;
+animation: float 3s ease-in-out infinite;
 }
 button:hover {
 box-shadow: 0px 0px;
 transform: translate(3px, 3px);
 transition: all 200ms ease;
 }
+    @keyframes float {
+      0%   { transform: translateY(0px) translateX(5px) rotate(2deg); }
+      50%  { transform: translateY(-10px) rotate(-2deg); }
+      100% { transform: translateY(0px) translateX(5px)rotate(2deg); }
 .text{
   font-family: Arial;
   font-display: bold;
@@ -32,18 +40,31 @@ transition: all 200ms ease;
 }
 </style>
  <!-- Gambar dari file lokal -->
-<a href="https://ibb.co.com/HLX55tLT"><img src="https://i.ibb.co.com/5X2bbrXh/Proyek-Baru-57.png" alt="Proyek-Baru-57" width="150" height="150" border="0" /></a>
+<img src="https://i.ibb.co.com/5X2bbrXh/Proyek-Baru-57.png" alt="Proyek-Baru-57" width="150" height="150" border="0" /></a>
     <h1 class="text">repciktinnnn</h1>
     <p>Follow Media Sosial Guaa!!.</p>
+    <audio id="klikSound" src="https://neighbouring-beige-6yuiwe5y3t.edgeone.app/click-button-140881.mp3"></audio>
     <a href="https://youtube.com/@repi.rimekk?si=a9UTi88kNYA6jZbl">
-      <button style="font-family: Arial; font-size: 20px; font-weight: bold;">
+      <button class:"button" onclick="playSound()" style="font-family: Arial; font-size: 20px; font-weight: bold;">
         YouTube
         </button>
       <br> <br>
       <a href="https://www.tiktok.com/@repidarehan?_t=ZS-8znKOHgwPKS&_r=1">
-<button style="font-family: Arial; font-size: 20px; font-weight: bold;">
+<button class:"button" onclick="playSound()" style="font-family: Arial; font-size: 20px; font-weight: bold;">
   Tiktok
 </button>
+<br> <br>
+      <a href="https://www.instagram.com/repzzsixteen?igsh=MXhidmVrYm4xY3Z1MA==">
+<button class:"button" onclick="playSound()" style="font-family: Arial; font-size: 20px; font-weight: bold;">
+  Instagram
+</button>
+<script>
+  function playSound() {
+    var sound = document.getElementById("klikSound");
+    sound.currentTime = 0; // reset supaya bisa diputar berulang
+    sound.play()
+  }
+</script>
 
 </body>
 </html>
